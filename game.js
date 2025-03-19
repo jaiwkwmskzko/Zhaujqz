@@ -18,8 +18,8 @@ let pipeSpeed = 2;
 let score = 0;
 let gameOver = false;
 
-// Event listener for bird flap
-document.addEventListener('keydown', () => {
+// Touch event for bird flap
+canvas.addEventListener('touchstart', () => {
     if (gameOver) return;
     isFlapping = true;
 });
@@ -94,7 +94,7 @@ function drawGameOver() {
     ctx.font = '30px Arial';
     ctx.fillText('Game Over', 90, canvas.height / 2);
     ctx.font = '20px Arial';
-    ctx.fillText('Press F5 to Restart', 90, canvas.height / 2 + 30);
+    ctx.fillText('Tap to Restart', 90, canvas.height / 2 + 30);
 }
 
 // Main game loop
